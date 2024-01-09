@@ -56,7 +56,7 @@ function openGame(i){
 function displayname(){
     let cols = ``;
     for (let i = 0; i < data.length; i++) {
-        cols +=` <div class="col-md-3 g-4 mb-5 ">
+        cols +=` <div class="col-lg-3 col-md-6 col-12 g-4 mb-5 ">
         <div class="card h-100  mb-3 bg-transparent"   onclick='openGame(${i});' >
         <div class='card-body card-color'>
         <img src="${data[i].thumbnail}"  class="w-100"   alt="">
@@ -96,15 +96,18 @@ const gameData = `
  <div class=row>
    <div class='col-md-4 >
      <div class='poster'>
-     <img src="${game.thumbnail}"  class="w-100"   alt="">
-     <a href="${game.game_url}" target="_Blank" class="btn btn-outline-warning mt-3 text-white">Show Game</a>
+     <img src="${game.thumbnail}"  class="w-100"   alt=""> 
+         <a href="${game.game_url}" target="_Blank" class="btn btn-outline-warning mt-3 text-white">Show Game</a>
+
        </div>
        <div class="col-12 col-md-8 text-light fw-bolder">
        <h3 class="headerFonts">Title: <span>${game.title}</span></h3>
        <p>Category: <span class="headerFonts badge bg-info text-black text-uppercase p-2">${game.genre}</span></p>
        <p>Platform: <span class="headerFonts badge bg-info text-black text-uppercase p-2">${game.platform}</span></p>
        <p>Status: <span class="headerFonts badge bg-info text-black text-uppercase p-2">${game.status}</span></p>
-       <p class="mb-3">${game.description}</p>
+     <p class="mb-3  p-0">${game.description}</p>
+ 
+  
      </div>
      </div>
    </div>
